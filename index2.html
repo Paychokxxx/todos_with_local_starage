@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equv="X-UA-Compatible" content="ie=edge">
     <title>Todo Tracker</title>
+
+    <style>
+        body {
+            padding: 15px;
+            background-color: aqua;
+            font-family: sans-serif;            
+        }
+        #title {
+            padding: 10px;
+            font-size: 36px;
+            border: 2px solid #fff;
+            width: 250px;
+        }
+        #todo-header {
+            font-size: 44px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            width: 250px;
+        }
+        li {
+            color: #333;
+            background-color: grey;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+    
+        }
+    </style>
 </head>       
 <body>
     <h1 id="title"> TODO TRACKER </h1>
@@ -63,6 +93,7 @@
 
         button.addEventListener('click', function (){
             localStorage.clear();
+            todosArray = []; //added fix 
             while(todoList.firstChild) {
                 todoList.removeChild(todoList.firstChild);
             }
@@ -77,3 +108,4 @@
 
 
 </body>
+</html>
